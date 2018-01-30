@@ -61,8 +61,15 @@ for j in range (5, 10):
 	s = numpy.std(a)
 	stdAfter.append(s)
 print('************')
+
+differenceInStd = 0;
 for i in range(0, 5):
 	print('Column ', i+1, ' stdBefore = ', stdBefore[i], ' & stdAfter = ', stdAfter[i])
+	differenceInStd += (stdBefore[i]-stdAfter[i])
+
+# average difference is now calculated and is termed as fluctuation
+fluctuation = float(differenceInStd/5)
+print('###Fluctuation = ', fluctuation, ' ###')
 
 # for plotting graph using matplotlib of python
 columns = [1,2,3,4,5]
